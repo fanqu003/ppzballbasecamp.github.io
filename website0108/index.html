@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>饋子丹強力過件 - 專業貸款服務</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            text-align: center;
+        }
+
+        .hero-banner {
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s;
+        }
+
+        .banner-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s 0.2s backwards;
+        }
+
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .features {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #667eea;
+        }
+
+        .contact {
+            background: white;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-item {
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">饋子丹強力過件</div>
+            <ul class="nav-links">
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#features">我們的優勢</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-banner">
+            <img src="likeit.png" alt="饋子丹強力過件橫幅" class="banner-image">
+        </div>
+        <h1>饋子丹強力過件</h1>
+        <p>專業貸款服務 | 快速審核 | 強力過件保證</p>
+        <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+            立即諮詢
+        </button>
+    </section>
+
+    <section id="services" class="container">
+        <h2 class="section-title">我們的服務</h2>
+        <div class="services">
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <img src="houseloan.jpg" alt="房屋貸款" class="service-icon" style="width: 200px; height: 200px; 
+                display: block; margin: 0 auto 1rem;">
+                </div>
+                <h3>房屋貸款</h3>
+                <p>提供優惠房貸方案，協助您實現購屋夢想，快速審核通過</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="caroncrossroad.png" alt="汽車貸款" class="service-icon" style="width: 200px; height: 200px; 
+                display: block; margin: 0 auto 1rem;">
+                </div>
+                <h3>汽車貸款</h3>
+                <p>新車、中古車貸款服務，彈性還款方案，輕鬆擁有愛車</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="pigbrother.png" alt="信用貸款" class="service-icon" style="width: 200px; height: 200px; 
+                display: block; margin: 0 auto 1rem;">
+                </div>
+                <h3>信用貸款</h3>
+                <p>個人信用貸款，無需擔保品，快速撥款解決您的資金需求</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="bin3to0.webp" alt="企業貸款" class="service-icon" style="width: 200px; height: 200px; 
+                display: block; margin: 0 auto 1rem;">
+                </div>
+                <h3>企業貸款</h3>
+                <p>企業週轉金、設備融資，助力事業發展擴張</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">為什麼選擇我們</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h4>強力過件保證</h4>
+                        <p>豐富經驗與專業團隊，提高您的過件率</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h4>快速審核</h4>
+                        <p>最快24小時內完成審核流程</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h4>彈性方案</h4>
+                        <p>根據您的需求量身打造最適合的貸款方案</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h4>專業諮詢</h4>
+                        <p>免費專業評估，提供最佳貸款建議</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">聯絡我們</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>📞 電話</strong>
+                <a href="tel:0906522256" style="color: white; text-decoration: none;">0907-422-256</a>
+            </div>
+            <div class="contact-item">
+                <strong>📍 地址</strong>
+                239新北市樹林區啟志街19巷46號3樓
+            </div>
+            <div class="contact-item">
+                <strong>⏰ 營業時間</strong>
+                週一至週四 09:00 - 18:00
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h3 class="team-title">專業服務團隊(十年經驗)</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="manage (1).jpg" width="500px" height="500px" alt="專員一" class="team-photo">
+                    <h4>roger9527</h4>
+                </div>
+                <div class="team-member">
+                    <img src="manage (2).jpg" width="500px" height="500px" alt="專員二" class="team-photo">
+                    <h4>sam1268</h4>
+                </div>
+                <div class="team-member">
+                    <img src="manage (3).jpg" width="500px" height="500px" alt="專員三" class="team-photo">
+                    <h4>クロエ素頭</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 饋子丹強力過件 版權所有<br>
+            此為作業練習如有雷同不關我的事<br>
+        </p>
+    </footer>
+
+    <script>
+        // 平滑滾動效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 滾動時添加陰影效果
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+
+</html>
